@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muscle Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo-container">
+            <a class="logo-link" href="#">
+                <img id="logo" src="assets/get-fit-high-resolution-logo-transparent.png">
+            </a>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a class="nav-list-item" href="">Home</a>
+                </li>
+                <li>
+                    <a class="nav-list-item" href="#get-started">Get started</a>
+                </li>
+                <li>
+                    <a class="nav-list-item" href="#about-us">About us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="welcome" class="container">
+            <section id="welcome-page">
+                <h1 class="w-title">Your ultimate companion for unlocking your full physical potential</h1>
+                <p class="w-desc">You’re in control! Design workouts that focus on the areas you want to improve. We’re here to guide you with suggestions and ideas to help you get started. Whether your goal is building strength, enhancing mobility, or prioritizing recovery, we provide the tools you need to create exercises that suit your unique needs. Choose your target muscle groups, and let us inspire your fitness journey!</p>
+                <form action="/submit-signup" method="POST">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    
+                    <button type="submit" id="submit" class="button-style">Sign Up</button>
+                </form>
+            </section>
+        </div>
+        <div class="container">
+            <section id="get-started">
+                <h2>Get started</h2>
+                <div class="buttons">
+                    <button onclick="setLevel('beginner')" class="button-form">Beginner</button>
+                    <button onclick="setLevel('intermediate')" class="button-form">Intermediate</button>
+                    <button onclick="setLevel('expert')" class="button-form">Expert</button>
+                </div>
+                <div id="muscle-options" class="muscle-groups hidden">
+                    <h2>Choose a Muscle Group</h2>
+                    <ul>
+                      <button onclick="finalOutput('Chest')" class="button-form">Chest</button>
+                      <button onclick="finalOutput('Back')" class="button-form">Back</button>
+                      <button onclick="finalOutput('Legs')" class="button-form">Legs</button>
+                      <button onclick="finalOutput('Arms')" class="button-form">Arms</button>
+                      <button onclick="finalOutput('Core')" class="button-form">Core</button>
+                    </ul>
+                </div>
+
+                  <div id="result" class="hidden">
+                    <h2>Your Workout Plan</h2>
+                    <p id="output"></p>
+                  </div>
+            </section>
+        </div>
+        <div class="container">
+        <section id="about-us">
+            <h2>About us</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis perferendis adipisci dolorum unde nisi voluptas inventore nam? Placeat a delectus blanditiis ullam explicabo. Nesciunt ducimus quisquam, enim obcaecati quae dolore.</p>
+        </section>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>
